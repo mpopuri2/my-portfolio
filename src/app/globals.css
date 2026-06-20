@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: #818cf8;
+    --brand-dark: #6366f1;
+    --brand-light: #a5b4fc;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #04040a;
+    color: #f1f5f9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Restore cursor on touch devices */
+  @media (hover: none) {
+    body { cursor: auto; }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(129, 140, 248, 0.25);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(129, 140, 248, 0.45);
+  }
+
+  ::selection {
+    background: rgba(129, 140, 248, 0.22);
+    color: #f1f5f9;
+  }
+}
+
+/* Restore normal cursor for Ask Manny chat widget */
+.ask-manny-zone,
+.ask-manny-zone * {
+  cursor: auto !important;
+}
